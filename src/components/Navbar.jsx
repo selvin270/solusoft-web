@@ -54,7 +54,7 @@ const Navbar = () => {
 
                 {/* DESKTOP BUTTON */}
                 <a
-                    href="http://35.255.182.141:3002/"
+                    href="https://demo.solusoftgt.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hidden lg:block bg-blue-600 hover:bg-blue-500 text-white transition px-6 py-3 rounded-2xl font-semibold text-center"
@@ -97,7 +97,7 @@ const Navbar = () => {
                             Reservar Cita
                         </li>
                         <a
-                            href="http://35.255.182.141:3002/"
+                            href="https://demo.solusoftgt.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="mt-4 bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-2xl font-semibold transition text-center block"
