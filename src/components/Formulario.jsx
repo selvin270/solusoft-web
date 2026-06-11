@@ -58,13 +58,13 @@ const Formulario = () => {
                             ¿<span className="text-blue-500">Comunícate</span> con nosotros, será un <span className="text-blue-500">gusto</span> atenderte.
                         </h2>
                         <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                            Escríbenos hoy mismo. Te asesoramos y evaluamos tus requerimientos para brindarte una atención personalizada.
+                            Escríbenos hoy mismo. Te asesoramos y evaluamos tus requerimientos para brindarte una atención personalizada y ayudarte con tus necesidades.
                         </p>
                         
                         <div className="mt-10 space-y-4">
                             {[
                                 "Respuesta en menos de 24 horas.",
-                                "Asesoría profesional.",
+                                "Asesoría profesional y personalizada.",
                                 "Soporte técnico 24/7."
                             ].map((text, i) => (
                                 <motion.div 
@@ -112,7 +112,7 @@ const Formulario = () => {
                                     </div>
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-300 mb-2">Número de Teléfono</label>
-                                        <input required type="tel" className="w-full px-4 py-3 rounded-xl bg-[#050816] border border-blue-500/20 text-white focus:outline-none focus:border-blue-500 transition placeholder:text-gray-600" placeholder="" value={formData.telefono} onChange={(e) => setFormData({...formData, telephone: e.target.value})} />
+                                        <input required type="tel" className="w-full px-4 py-3 rounded-xl bg-[#050816] border border-blue-500/20 text-white focus:outline-none focus:border-blue-500 transition placeholder:text-gray-600" placeholder="" value={formData.telefono} onChange={(e) => setFormData({...formData, telefono: e.target.value})} />
                                     </div>
                                 </div>
 
@@ -138,7 +138,7 @@ const Formulario = () => {
                                         {cargando ? (
                                             <>Enviando mensaje... <Loader2 size={18} className="animate-spin" /></>
                                         ) : (
-                                            <>Enviar Correo </>
+                                            <>Enviar Correo</>
                                         )}
                                     </button>
 
