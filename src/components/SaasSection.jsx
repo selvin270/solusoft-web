@@ -72,17 +72,25 @@ const plans = [
 const Services = () => {
     const [isYearly, setIsYearly] = useState(false);
 
+    // Función para manejar el scroll suave hacia cualquier sección por su ID
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <section id="services-saas" className="bg-white text-black py-20">
             <div className="max-w-7xl mx-auto px-6">
-                
+
                 {/* ENCABEZADO INTEGRADO */}
                 <div className="max-w-3xl">
                     <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-950">
                         Nuestra Plataforma <span className="text-blue-600">SaaS</span>
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-                        Un sistema administrativo potente y adaptable listo para operar en empresas, farmacias, 
+                        Un sistema administrativo potente y adaptable listo para operar en empresas, farmacias,
                         mecánicas, abarroterías, carpinterías, herrerías y ferreterías.
                     </p>
                 </div>
@@ -90,8 +98,8 @@ const Services = () => {
                 {/* GRID ESTILO BENTO BOX CON MÁRGENES OPTIMIZADOS */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
                     {features.map((feat, index) => (
-                        <div 
-                            key={index} 
+                        <div
+                            key={index}
                             className="group p-6 rounded-2xl bg-gradient-to-b from-gray-50 to-white border border-gray-200/80 hover:border-blue-500/30 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col justify-between"
                         >
                             <div>
@@ -99,11 +107,11 @@ const Services = () => {
                                 <div className="text-blue-600 bg-blue-50 w-11 h-11 rounded-xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                                     {feat.icon}
                                 </div>
-                                
+
                                 <h3 className="text-xl font-bold text-gray-900 mt-5 tracking-tight">
                                     {feat.title}
                                 </h3>
-                                
+
                                 <p className="text-sm text-gray-500 mt-2.5 leading-relaxed">
                                     {feat.desc}
                                 </p>
@@ -134,7 +142,7 @@ const Services = () => {
                             <div className={`w-6 h-6 bg-blue-600 rounded-full shadow-md transform transition-transform duration-300 ${isYearly ? "translate-x-6" : "translate-x-0"}`} />
                         </button>
                         <span className={`text-sm font-semibold flex items-center gap-1.5 ${isYearly ? "text-blue-600" : "text-gray-500"}`}>
-                            Anual 
+                            Anual
                             <span className="text-xs bg-green-100 text-green-700 font-bold px-2 py-0.5 rounded-full">
                                 Ahorra
                             </span>
@@ -147,11 +155,10 @@ const Services = () => {
                     {plans.map((plan, index) => (
                         <div
                             key={index}
-                            className={`relative rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 ${
-                                plan.popular 
-                                    ? "bg-gray-950 text-white shadow-xl shadow-gray-950/10 scale-105 z-10 border border-gray-900" 
+                            className={`relative rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 ${plan.popular
+                                    ? "bg-gray-950 text-white shadow-xl shadow-gray-950/10 scale-105 z-10 border border-gray-900"
                                     : "bg-gradient-to-b from-gray-50 to-white border border-gray-200 hover:shadow-lg text-gray-900"
-                            }`}
+                                }`}
                         >
                             {plan.popular && (
                                 <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
@@ -168,7 +175,7 @@ const Services = () => {
                                 <div className="mt-6 flex items-baseline gap-1">
                                     <span className="text-4xl font-black">
                                         Q{isYearly ? plan.priceYearly.toLocaleString() : plan.priceMonthly}
-                                                    </span>
+                                    </span>
                                     <span className={`text-sm font-medium ${plan.popular ? "text-gray-400" : "text-gray-500"}`}>
                                         /{isYearly ? "año" : "mes"}
                                     </span>
@@ -190,11 +197,11 @@ const Services = () => {
 
                             <div className="mt-8">
                                 <button
-                                    className={`w-full py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 ${
-                                        plan.popular
+                                    onClick={() => scrollToSection("reservar-cita")}
+                                    className={`w-full py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 ${plan.popular
                                             ? "bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/20"
                                             : "bg-gray-100 hover:bg-gray-200 text-gray-900"
-                                    }`}
+                                        }`}
                                 >
                                     Comenzar ahora
                                 </button>
