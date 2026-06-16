@@ -3,9 +3,9 @@ import { Monitor, Smartphone, Database, ShieldCheck } from "lucide-react";
 
 const services = [
     { icon: <Monitor size={22} />, title: "Páginas Web", desc: "Sitios web modernos, rápidos y multiplataforma." },
-    { icon: <Smartphone size={22} />, title: "Apps Móviles", desc: "Aplicaciones nativas e híbridas para Android y iOS." },
-    { icon: <Database size={22} />, title: "Software a la Medida", desc: "Sistemas administrativos adaptados a tu flujo real." },
-    { icon: <ShieldCheck size={22} />, title: "Soporte Técnico", desc: "Mantenimiento continuo y evolución de tus plataformas." }
+    { icon: <Smartphone size={22} />, title: "Apps Móviles", desc: "Aplicaciones móviles para Android y iOS." },
+    { icon: <Database size={22} />, title: "Software a la Medida", desc: "Sistemas administrativos según tus necesidades." },
+    { icon: <ShieldCheck size={22} />, title: "Soporte Técnico", desc: "Soporte técnico 24/7." }
 ];
 
 const CustomSoftware = () => {
@@ -19,7 +19,7 @@ const CustomSoftware = () => {
                         Desarrollo de <span className="text-blue-600">Software</span> a tu medida
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 leading-relaxed">
-                        Creamos soluciones tecnológicas desde cero para resolver problemas específicos, 
+                        Creamos soluciones tecnológicas para resolver problemas específicos, 
                         automatizar procesos y escalar la operación de tu empresa.
                     </p>
                 </div>
@@ -33,9 +33,9 @@ const CustomSoftware = () => {
                         >
                             <div>
                                 {/* Icono con animación activa al hacer hover en la tarjeta */}
-                                <div className="text-blue-600 bg-blue-50 w-11 h-11 rounded-xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                                {/* <div className="text-blue-600 bg-blue-50 w-11 h-11 rounded-xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                                     {service.icon}
-                                </div>
+                                </div> */}
 
                                 <h3 className="text-xl font-bold text-gray-900 mt-5 tracking-tight">
                                     {service.title}

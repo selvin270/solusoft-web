@@ -47,7 +47,7 @@ const Navbar = () => {
                         onClick={() => scrollToSection("services-saas")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
-                        SaaS
+                        SAE
                     </li>
 
                 </ul>
@@ -59,7 +59,7 @@ const Navbar = () => {
                     rel="noopener noreferrer"
                     className="hidden lg:block bg-blue-600 hover:bg-blue-500 text-white transition px-6 py-3 rounded-2xl font-semibold text-center"
                 >
-                    Demo SaaS
+                    Demo SAE
                 </a>
 
                 {/* MOBILE BUTTON */}

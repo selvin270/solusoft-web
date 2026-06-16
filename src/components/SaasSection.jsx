@@ -87,7 +87,7 @@ const Services = () => {
                 {/* ENCABEZADO INTEGRADO */}
                 <div className="max-w-3xl">
                     <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-950">
-                        Nuestra Plataforma <span className="text-blue-600">SaaS</span>
+                        Nuestra Plataforma <span className="text-blue-600">SAE</span>
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 leading-relaxed">
                         Un sistema administrativo potente y adaptable listo para operar en empresas, farmacias,
@@ -104,9 +104,9 @@ const Services = () => {
                         >
                             <div>
                                 {/* Icono estilizado con transición activa al hacer hover en la tarjeta */}
-                                <div className="text-blue-600 bg-blue-50 w-11 h-11 rounded-xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                                {/* <div className="text-blue-600 bg-blue-50 w-11 h-11 rounded-xl flex items-center justify-center border border-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                                     {feat.icon}
-                                </div>
+                                </div> */}
 
                                 <h3 className="text-xl font-bold text-gray-900 mt-5 tracking-tight">
                                     {feat.title}

@@ -27,11 +27,11 @@ const Hero = () => {
                         </div> */}
 
                         <h1 className="mt-8 font-black leading-tight text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl">
-                            Transformamos ideas en <span className="text-blue-500">software</span> para impulsar tu negocio
+                            Transformamos ideas en <span className="text-blue-500">soluciones digitales</span> 
                         </h1>
 
                         <p className="mt-8 text-gray-400 leading-relaxed text-lg md:text-xl max-w-2xl">
-                            Creamos software a la medida y también te ofrecemos nuestro poderoso SaaS (Sofware como Servicio) Sistema Administrativo Empresarial por suscripción mensual.
+                            Creamos sistemas a la medida y también te ofrecemos nuestro poderoso SAE Sistema Administrativo Empresarial por suscripción mensual.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -48,7 +48,7 @@ const Hero = () => {
                                 onClick={() => scrollToSection("services-saas")}
                                 className="border border-gray-600 hover:border-blue-500 hover:bg-blue-500/10 transition px-8 py-4 rounded-2xl font-semibold text-white"
                             >
-                                Conoce nuestro SaaS
+                                Conoce nuestro SAE
                             </button>
                         </div>
                     </motion.div>
