@@ -58,13 +58,13 @@ const Formulario = () => {
                             ¿<span className="text-blue-500">Comunícate</span> con nosotros, será un <span className="text-blue-500">gusto</span> atenderte.
                         </h2>
                         <p className="mt-6 text-gray-400 text-lg leading-relaxed">
-                            Escríbenos hoy mismo. Te asesoramos y evaluamos tus requerimientos para brindarte una atención personalizada y ayudarte con tus necesidades.
+                            Escríbenos hoy mismo. Te asesoramos y evaluamos tus requerimientos para brindarte una atención personalizada en base a tus necesidades.
                         </p>
                         
                         <div className="mt-10 space-y-4">
                             {[
                                 "Respuesta en menos de 24 horas.",
-                                "Asesoría profesional y personalizada.",
+                                "Asesoría profesional.",
                                 "Soporte técnico 24/7."
                             ].map((text, i) => (
                                 <motion.div 

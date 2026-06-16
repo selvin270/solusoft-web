@@ -41,7 +41,7 @@ const Navbar = () => {
                         onClick={() => scrollToSection("reservar-cita")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
-                        Reservar Cita
+                        Contáctanos
                     </li>
                     <li
                         onClick={() => scrollToSection("services-saas")}
@@ -94,7 +94,7 @@ const Navbar = () => {
                             onClick={() => scrollToSection("reservar-cita")}
                             className="cursor-pointer hover:text-blue-400 transition"
                         >
-                            Reservar Cita
+                            Contáctanos
                         </li>
                         <a
                             href="https://demo.solusoftgt.com/"
