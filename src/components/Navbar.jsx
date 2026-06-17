@@ -35,7 +35,13 @@ const Navbar = () => {
                         onClick={() => scrollToSection("custom-software")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
-                        Software a Medida
+                        Servicios
+                    </li>
+                    <li
+                        onClick={() => scrollToSection("services-saas")}
+                        className="hover:text-blue-400 transition cursor-pointer"
+                    >
+                        Productos
                     </li>
                     <li
                         onClick={() => scrollToSection("reservar-cita")}
@@ -43,12 +49,7 @@ const Navbar = () => {
                     >
                         Contáctanos
                     </li>
-                    <li
-                        onClick={() => scrollToSection("services-saas")}
-                        className="hover:text-blue-400 transition cursor-pointer"
-                    >
-                        SAE
-                    </li>
+                    
 
                 </ul>
 
