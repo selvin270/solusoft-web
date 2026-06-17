@@ -55,7 +55,7 @@ const Formulario = () => {
                         transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                     >
                         <h2 className="text-5xl font-black text-white leading-tight">
-                            ¿<span className="text-blue-500">Comunícate</span> con nosotros, será un <span className="text-blue-500">gusto</span> atenderte.
+                            <span className="text-blue-500">Comunícate</span> con nosotros, será un <span className="text-blue-500">gusto</span> atenderte.
                         </h2>
                         <p className="mt-6 text-gray-400 text-lg leading-relaxed">
                             Escríbenos hoy mismo. Te asesoramos y evaluamos tus requerimientos para brindarte una atención personalizada en base a tus necesidades.
