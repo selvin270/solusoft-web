@@ -116,10 +116,10 @@ const Services = () => {
                         href="https://demo.solusoftgt.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hidden lg:flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white transition px-6 py-3 rounded-2xl font-semibold text-center" 
+                        className=" lg:flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white transition px-6 py-3 rounded-2xl font-semibold text-center" 
                     >
                         <span className="text-white">Te invitamos a probar nuestro sistema haciendo clic aquí</span>
-                        <Pointer size={20} color="white" />
+                        {/* <Pointer size={20} color="white" /> */}
                     </a>
                 </div>
 
