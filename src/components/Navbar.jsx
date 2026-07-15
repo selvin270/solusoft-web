@@ -31,17 +31,12 @@ const Navbar = () => {
                     >
                         Inicio
                     </li>
-                    <li
-                        onClick={() => scrollToSection("custom-software")}
-                        className="hover:text-blue-400 transition cursor-pointer"
-                    >
-                        Servicios
-                    </li>
+                    
                     <li
                         onClick={() => scrollToSection("services-saas")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
-                        Productos
+                        SAE
                     </li>
                     <li
                         onClick={() => scrollToSection("reservar-cita")}

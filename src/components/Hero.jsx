@@ -27,11 +27,11 @@ const Hero = () => {
                         </div> */}
 
                         <h1 className="mt-8 font-black leading-tight text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl">
-                            Transformamos ideas en <span className="text-blue-500">soluciones digitales</span> 
+                            Te ofrecemos soluciones <span className="text-blue-500">digitales para tu negocio</span> 
                         </h1>
 
                         <p className="mt-8 text-gray-400 leading-relaxed text-lg md:text-xl max-w-2xl">
-                            Creamos sistemas a la medida y también te ofrecemos nuestro poderoso SAE Sistema Administrativo Empresarial por suscripción mensual.
+                            Te presentamos nuestro poderoso <strong style={{color: "white"}}>SAE (Sistema Administrativo Empresarial).</strong> Es un software que facilita la gestión de productos, ventas y compras.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -40,7 +40,7 @@ const Hero = () => {
                                 onClick={() => scrollToSection("reservar-cita")}
                                 className="bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-2xl font-semibold text-white shadow-lg shadow-blue-500/20"
                             >
-                                Cotizar software personalizado
+                                Comunícate con nosotros
                             </button>
 
                             {/* Este botón baja directamente a la presentación de la plataforma SaaS */}

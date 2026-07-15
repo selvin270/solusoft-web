@@ -11,9 +11,10 @@ function App() {
     <div className="w-full min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-      <Services />
-      <Formulario />
       <SaasSections />
+      {/* <Services /> */}
+      <Formulario />
+      
       <Footer />
     </div>
   );
