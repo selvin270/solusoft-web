@@ -92,7 +92,7 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             className="mt-4 bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-2xl font-semibold transition text-center block"
                         >
-                            Demo SaaS
+                            Demo SAE
                         </a>
                     </ul>
                 </div>
