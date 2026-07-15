@@ -78,7 +78,7 @@ const Services = () => {
                 {/* ENCABEZADO INTEGRADO */}
                 <div className="max-w-3xl">
                     <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-950">
-                        Nuestra Plataforma <span className="text-blue-600">SAE</span> Sistema Administrativo Empresarial
+                        Nuestra Plataforma <span className="text-blue-600">SAE</span> Por solo <span className="text-blue-600">Q150</span> mensual.
                     </h2>
                     <p className="mt-4 text-lg text-gray-600 leading-relaxed">
                         Un sistema administrativo potente y adaptable listo para operar en empresas, farmacias, mecánicas, abarroterías, carpinterías, herrerías y ferreterías.
