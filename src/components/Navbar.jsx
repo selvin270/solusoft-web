@@ -5,98 +5,126 @@ import logoSolusoft from '../assets/logo.png';
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
-    // Función para hacer scroll suave a las secciones usando su ID
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
+
         if (element) {
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         }
-        setOpen(false); // Cierra el menú móvil al hacer click
+
+        setOpen(false);
     };
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 bg-[#050816]/90 backdrop-blur-lg border-b border-blue-500/10">
-            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center">
 
                 {/* LOGO */}
-                <div className="flex items-center gap-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    <img src={logoSolusoft} alt="SOLUSOFT" className="p-2" style={{ width: '100%', maxWidth: '280px', marginTop: '10px', objectFit: 'contain' }} />
+
+                <div
+                    className="flex items-center gap-4 cursor-pointer"
+                    onClick={() =>
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        })
+                    }
+                >
+
+                    <img
+                        src={logoSolusoft}
+                        alt="SOLUSOFT"
+                        className="p-2"
+                        style={{
+                            width: '100%',
+                            maxWidth: '280px',
+                            marginTop: '10px',
+                            objectFit: 'contain'
+                        }}
+                    />
+
                 </div>
 
+
                 {/* DESKTOP MENU */}
-                <ul className="hidden lg:flex items-center gap-10 text-gray-300 font-medium">
+
+                <ul className="hidden lg:flex items-center gap-10 text-gray-300 font-medium ml-auto">
+
                     <li
-                        onClick={() => scrollToSection("home")}
+                        onClick={() => scrollToSection("banner")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
                         Inicio
                     </li>
-                    
+
                     <li
-                        onClick={() => scrollToSection("services-saas")}
+                        onClick={() => scrollToSection("sae")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
                         SAE
                     </li>
+
                     <li
-                        onClick={() => scrollToSection("reservar-cita")}
+                        onClick={() => scrollToSection("formulario")}
                         className="hover:text-blue-400 transition cursor-pointer"
                     >
                         Contáctanos
                     </li>
-                    
 
                 </ul>
 
-                {/* DESKTOP BUTTON */}
-                <a
-                    href="https://demo.solusoftgt.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden lg:block bg-blue-600 hover:bg-blue-500 text-white transition px-6 py-3 rounded-2xl font-semibold text-center"
-                >
-                    Demo SAE
-                </a>
 
                 {/* MOBILE BUTTON */}
-                <button className="lg:hidden text-white" onClick={() => setOpen(!open)}>
+
+                <button
+                    className="lg:hidden text-white ml-auto"
+                    onClick={() => setOpen(!open)}
+                >
                     {open ? <X size={32} /> : <Menu size={32} />}
                 </button>
+
             </div>
 
+
             {/* MOBILE MENU */}
+
             {open && (
+
                 <div className="lg:hidden bg-[#0b1120] border-t border-blue-500/10 px-6 py-6 text-white">
+
                     <ul className="flex flex-col gap-6 text-lg">
+
                         <li
-                            onClick={() => scrollToSection("home")}
+                            onClick={() => scrollToSection("banner")}
                             className="cursor-pointer hover:text-blue-400 transition"
                         >
                             Inicio
                         </li>
+
                         <li
-                            onClick={() => scrollToSection("services-saas")}
+                            onClick={() => scrollToSection("sae")}
                             className="cursor-pointer hover:text-blue-400 transition"
                         >
                             SAE
                         </li>
+
                         <li
-                            onClick={() => scrollToSection("reservar-cita")}
+                            onClick={() => scrollToSection("formulario")}
                             className="cursor-pointer hover:text-blue-400 transition"
                         >
                             Contáctanos
                         </li>
-                        <a
-                            href="https://demo.solusoftgt.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-4 bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-2xl font-semibold transition text-center block"
-                        >
-                            Demo SAE
-                        </a>
+
                     </ul>
+
                 </div>
+
             )}
+
         </nav>
     );
 };

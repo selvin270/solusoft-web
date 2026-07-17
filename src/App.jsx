@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import SaasSections from "./components/SaasSection";
+import Banner from "./components/Banner";
+import SAE from "./components/SAE";
 import Footer from "./components/Footer";
 import Formulario from "./components/Formulario";
 
@@ -10,11 +9,9 @@ function App() {
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <SaasSections />
-      {/* <Services /> */}
+      <Banner />
+      <SAE />
       <Formulario />
-      
       <Footer />
     </div>
   );
