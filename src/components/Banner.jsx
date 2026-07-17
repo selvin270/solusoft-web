@@ -74,7 +74,7 @@ const Banner = () => {
                         <div className="flex flex-col sm:flex-row gap-4 mt-10">
 
                             <button
-                                onClick={() => scrollToSection("formulario")}
+                                onClick={() => scrollToSection("sae")}
                                 className="bg-blue-600 hover:bg-blue-500 transition px-8 py-4 rounded-xl font-semibold text-white shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2"
                             >
                                 Conoce más acerca de SAE
