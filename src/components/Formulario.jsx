@@ -12,7 +12,8 @@ const Formulario = () => {
         nombre: "",
         apellido: "",
         telefono: "",
-        correo: ""
+        correo: "",
+        mensaje: "" // <-- Nuevo estado para el mensaje
     });
 
     const [enviado, setEnviado] = useState(false);
@@ -56,6 +57,7 @@ const Formulario = () => {
                         Apellido: formData.apellido,
                         Teléfono: formData.telefono,
                         Correo: formData.correo,
+                        Mensaje: formData.mensaje, // <-- Se añade el mensaje al envío
                         _subject: `Nuevo prospecto SAE - ${formData.nombre} ${formData.apellido}`
                     })
                 }
@@ -137,7 +139,7 @@ const Formulario = () => {
                                 />
 
                                 <span className="text-gray-300 font-medium">
-                                    Cuentanos sobre tu negocio.
+                                    Cuéntanos sobre tu negocio.
                                 </span>
 
                             </div>
@@ -279,6 +281,26 @@ const Formulario = () => {
                                         />
 
                                     </div>
+
+                                </div>
+
+
+                                {/* MENSAJE (NUEVO TEXTAREA) */}
+                                <div>
+
+                                    <label className="block text-sm font-semibold text-gray-300 mb-2">
+                                        Mensaje
+                                    </label>
+
+                                    <textarea
+                                        required
+                                        name="mensaje"
+                                        value={formData.mensaje}
+                                        onChange={handleChange}
+                                        placeholder="Escribe aquí tus dudas o cuéntanos más sobre tu negocio..."
+                                        rows="4"
+                                        className="w-full px-4 py-4 rounded-xl bg-[#050816] border border-gray-700 text-white focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-500/20 transition placeholder:text-gray-500 resize-y"
+                                    ></textarea>
 
                                 </div>
 
