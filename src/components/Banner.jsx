@@ -66,7 +66,10 @@ const Banner = () => {
                             <strong className="text-white">
                                 SAE (Sistema Administrativo Empresarial)
                             </strong>{" "}
-                            te ayuda a controlar ventas, inventario, compras y caja desde un solo lugar.
+                            te ayuda a controlar ventas, inventario, compras y caja desde un solo lugar.<br/><br/>
+                            <strong className="text-white">
+                                Lo adaptamos según tus necesidades sin ningún costo. Primero entendemos tus procesos y luego trabajamos en base a ello.
+                            </strong>{" "}
 
                         </p>
 
