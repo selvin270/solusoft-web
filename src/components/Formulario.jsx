@@ -116,13 +116,13 @@ const Formulario = () => {
 
                         <h2 className="mt-5 text-4xl md:text-5xl font-black leading-tight text-white">
 
-                            Te mostraremos cómo{" "}
+                            Te mostraremos lo que{" "}
 
                             <span className="text-blue-600">
                                 SAE
                             </span>{" "}
 
-                            puede ayudar tu negocio.
+                            puede hacer por tu negocio.
 
                         </h2>
 
