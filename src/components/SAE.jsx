@@ -130,7 +130,7 @@ const SAE = () => {
                                         <div className="flex items-baseline gap-2">
 
                                             <span className="text-4xl font-black text-blue-600">
-                                                Q150
+                                                Q250
                                             </span>
 
                                             <span className="font-bold text-gray-900">
