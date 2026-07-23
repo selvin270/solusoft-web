@@ -139,7 +139,7 @@ const Formulario = () => {
                                 />
 
                                 <span className="text-gray-300 font-medium">
-                                    info@solusoftgt.com
+                                    Correo: info@solusoftgt.com
                                 </span>
 
                             </div>
