@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import SAE from "./components/SAE";
 import Footer from "./components/Footer";
 import Formulario from "./components/Formulario";
+import Planes from "./components/Planes";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Banner />
       <SAE />
       <Formulario />
+      <Planes />
       <Footer />
     </div>
   );

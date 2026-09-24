@@ -75,6 +75,13 @@ const Navbar = () => {
                         Contáctanos
                     </li>
 
+                    <li
+                        onClick={() => scrollToSection("planes")}
+                        className="hover:text-blue-400 transition cursor-pointer"
+                    >
+                        Planes
+                    </li>
+
                 </ul>
 
 
@@ -117,6 +124,13 @@ const Navbar = () => {
                             className="cursor-pointer hover:text-blue-400 transition"
                         >
                             Contáctanos
+                        </li>
+
+                        <li
+                            onClick={() => scrollToSection("planes")}
+                            className="cursor-pointer hover:text-blue-400 transition"
+                        >
+                            Planes
                         </li>
 
                     </ul>

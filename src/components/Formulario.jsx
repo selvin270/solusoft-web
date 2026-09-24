@@ -166,20 +166,6 @@ const Formulario = () => {
                                 />
 
                                 <span className="text-gray-300 font-medium">
-                                    Adaptamos SAE a tus necesidades.
-                                </span>
-
-                            </div>
-
-
-                            <div className="flex items-center gap-3">
-
-                                <CheckCircle2
-                                    size={23}
-                                    className="text-blue-600 flex-shrink-0"
-                                />
-
-                                <span className="text-gray-300 font-medium">
                                     Te damos soporte técnico 24/7
                                 </span>
 
