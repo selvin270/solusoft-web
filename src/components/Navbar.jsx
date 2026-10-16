@@ -67,6 +67,13 @@ const Navbar = () => {
                     >
                         SAE
                     </li>
+                    
+                    <li
+                        onClick={() => scrollToSection("planes")}
+                        className="hover:text-blue-400 transition cursor-pointer"
+                    >
+                        Planes
+                    </li>
 
                     <li
                         onClick={() => scrollToSection("formulario")}
@@ -75,12 +82,6 @@ const Navbar = () => {
                         Contáctanos
                     </li>
 
-                    <li
-                        onClick={() => scrollToSection("planes")}
-                        className="hover:text-blue-400 transition cursor-pointer"
-                    >
-                        Planes
-                    </li>
 
                 </ul>
 
@@ -120,17 +121,17 @@ const Navbar = () => {
                         </li>
 
                         <li
-                            onClick={() => scrollToSection("formulario")}
-                            className="cursor-pointer hover:text-blue-400 transition"
-                        >
-                            Contáctanos
-                        </li>
-
-                        <li
                             onClick={() => scrollToSection("planes")}
                             className="cursor-pointer hover:text-blue-400 transition"
                         >
                             Planes
+                        </li>
+
+                        <li
+                            onClick={() => scrollToSection("formulario")}
+                            className="cursor-pointer hover:text-blue-400 transition"
+                        >
+                            Contáctanos
                         </li>
 
                     </ul>

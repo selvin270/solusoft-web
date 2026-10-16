@@ -1,40 +1,85 @@
 import React from "react";
 import {
-    BookOpen,
-    FileSpreadsheet,
-    HelpCircle,
-    Package,
-    ShoppingCart,
+    Building2,
+    Store,
+    ShieldCheck,
     Users,
+    Package,
+    Truck,
+    UserCheck,
+    Tags,
+    ShoppingCart,
+    ShoppingBag,
+    ClipboardList,
+    Calculator,
     Wallet,
-    Tag,
-    MessageCircle,
-    Hammer,      // Para Carpintería
-    Flame,       // Para Herrería
-    Wrench,      // Para Ferretería
-    Car          // Para Mecánica
+    Hammer,
+    Flame,
+    Wrench,
+    Car
 } from "lucide-react";
 
-const features = [
+// Lista completa de módulos derivados de la base de datos del sistema
+const modules = [
+    {
+        icon: <Store size={26} />,
+        title: "Sucursales",
+        desc: "Administra múltiples puntos de venta y ubicaciones de forma centralizada."
+    },
+    {
+        icon: <ShieldCheck size={26} />,
+        title: "Roles",
+        desc: "Configura roles de acceso dinámicos según los niveles jerárquicos del negocio."
+    },
+    {
+        icon: <Users size={26} />,
+        title: "Usuarios",
+        desc: "Administra el personal, asigna credenciales y controla permisos en cada sucursal."
+    },
     {
         icon: <Package size={26} />,
-        title: "Inventario",
-        desc: "Lleva el control de tus productos en stock por cada sucursal."
+        title: "Productos e Inventario",
+        desc: "Catálogo completo con soporte para SKUs autogenerados o lecturas por código de barras."
+    },
+    {
+        icon: <Truck size={26} />,
+        title: "Proveedores",
+        desc: "Registro detallado de proveedores, contactos, NIT y compras asociadas."
+    },
+    {
+        icon: <UserCheck size={26} />,
+        title: "Clientes",
+        desc: "Base de datos de clientes con historial de compras y datos de facturación."
+    },
+    {
+        icon: <Tags size={26} />,
+        title: "Categorías",
+        desc: "Clasifica y organiza tus productos para una búsqueda y control eficiente."
     },
     {
         icon: <ShoppingCart size={26} />,
         title: "Ventas",
-        desc: "Registra tus ventas de forma ordenada y enlazado a tus productos."
+        desc: "Procesamiento ágil de ventas, cálculo automático de impuestos y descuento directo del stock."
     },
     {
-        icon: <Users size={26} />,
-        title: "Usuarios y permisos",
-        desc: "Define qué puede ver y hacer cada persona dentro del sistema."
+        icon: <ShoppingBag size={26} />,
+        title: "Compras",
+        desc: "Registro de ingresos de mercadería con actualización automática de existencias y kardex."
+    },
+    {
+        icon: <ClipboardList size={26} />,
+        title: "Órdenes de Compra",
+        desc: "Planifica y gestiona solicitudes de pedidos a proveedores con estimación de costos."
+    },
+    {
+        icon: <Calculator size={26} />,
+        title: "Contabilidad",
+        desc: "Generación automática de asientos contables por ventas/compras, libro diario, mayor y períodos."
     },
     {
         icon: <Wallet size={26} />,
-        title: "Caja",
-        desc: "Monitorea tu caja para llevar aperturas y cierres."
+        title: "Cajas y Tesorería",
+        desc: "Control de sesiones de caja (apertura/cierre), arqueos, gastos menores y transferencias."
     }
 ];
 
@@ -62,21 +107,11 @@ const businesses = [
 ];
 
 const SAE = () => {
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-
-        if (element) {
-            element.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    };
-
     return (
         <section id="sae" className="bg-white text-black">
             {/* =========================
-          SOLUCIÓN
-      ========================== */}
+                MÓDULOS DE LA SOLUCIÓN
+            ========================== */}
             <div className="bg-gray-50 border-t border-gray-100 py-20">
                 <div className="max-w-7xl mx-auto px-6">
 
@@ -89,106 +124,35 @@ const SAE = () => {
                                 {" "}en una sola plataforma.
                             </span>
                         </h2>
+                        <p className="mt-4 text-gray-600 text-lg">
+                            Descubre todos los módulos integrados para automatizar la gestión operativa y contable de tus sucursales. <strong>Soporte técnico 24/7 y Sin contrato.</strong>
+                        </p>
                     </div>
 
-                    {/* FEATURES PRINCIPALES */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
-                        {features.map((feature, index) => (
+                    {/* TODOS LOS MÓDULOS */}
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-12">
+                        {modules.map((module, index) => (
                             <div
                                 key={index}
-                                className="group text-center p-7 rounded-xl bg-white border border-gray-200 hover:border-blue-500/30 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300"
+                                className="text-center p-7 rounded-xl bg-white border border-gray-200 hover:shadow-lg hover:border-blue-500/30 transition-all duration-300"
                             >
-                                {/* ICONO */}
-                                <div className="w-16 h-16 mx-auto rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                                    {feature.icon}
+                                {/* ICONO ESTÁTICO (Sin interacción hover) */}
+                                <div className="w-16 h-16 mx-auto rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                    {module.icon}
                                 </div>
 
                                 <h3 className="text-lg font-bold text-gray-900 mt-6">
-                                    {feature.title}
+                                    {module.title}
                                 </h3>
 
                                 <p className="text-sm text-gray-500 mt-3 leading-relaxed">
-                                    {feature.desc}
+                                    {module.desc}
                                 </p>
                             </div>
                         ))}
                     </div>
 
-                    {/* SECCIÓN TIPOS DE NEGOCIO */}
-                    <div className="mt-16">
-                        <div className="text-center mb-8">
-                            <h3 className="text-2xl font-bold text-gray-900">
-                                Diseñado para adaptarse a tu sector
-                            </h3>
-                            <p className="text-gray-500 text-sm mt-1">
-                                Optimiza la gestión diaria según la especialidad de tu comercio
-                            </p>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-                            {businesses.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className="group text-center p-7 rounded-xl bg-white border border-gray-200 hover:border-blue-500/30 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300"
-                                >
-                                    {/* ICONO */}
-                                    <div className="w-16 h-16 mx-auto rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                                        {item.icon}
-                                    </div>
-
-                                    <h3 className="text-lg font-bold text-gray-900 mt-6">
-                                        {item.title}
-                                    </h3>
-
-                                    <p className="text-sm text-gray-500 mt-3 leading-relaxed">
-                                        {item.desc}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* PRECIO Y CTA */}
-                    <div className="max-w-5xl mx-auto mt-12">
-                        <div className="bg-white border border-gray-200 rounded-xl shadow-sm px-8 py-6">
-                            <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-
-                                {/* PRECIO */}
-                                <div className="flex items-center gap-5">
-                                    <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                                        <Tag size={28} />
-                                    </div>
-
-                                    <div>
-                                        <div className="flex items-baseline gap-2">
-                                            <span className="text-6xl font-black text-blue-600">
-                                                Q250
-                                            </span>
-                                            <span className="font-bold text-gray-900">
-                                                / al mes
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* DESCRIPCIÓN */}
-                                <p className="text-gray-600 text-center lg:text-left max-w-xs">
-                                    Puedes cancelar la suscripción en cualquier momento<strong className="font-bold text-gray-900">, sin contrato, </strong>información protegida y <strong className="font-bold text-gray-900">soporte técnico 24/7.</strong>
-                                </p>
-
-                                {/* BOTÓN */}
-                                <a
-                                    href="https://demo.solusoftgt.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="bg-blue-600 hover:bg-blue-500 !text-white px-7 py-4 rounded-xl font-semibold transition flex items-center gap-2 shadow-lg shadow-blue-500/20 whitespace-nowrap"
-                                >
-                                    Prueba una Demostración
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
+                    
 
                 </div>
             </div>
